@@ -6,6 +6,11 @@
 			<div class='date'>
 				<p>published: {{ post.publised_date }}</p>
 			</div>
+<!-- create a URL for us!
+blog.views.post_detail is a path to a post_detail view we want to create. Please note: blog is the name of our application (the directory blog), views is from the name of the views.py file and the last bit - post_detail - is the name of the view.
+'post_detail' is a named URL defined in blog/views.py 'post_detail(request, pk)''
+-->
+
 			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
 			<p>{{ post.text|linebreaks }}</p>
 		</div>
